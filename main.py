@@ -9,8 +9,8 @@ if __name__ == "__main__":
     input_file = input("Please provide the list if IPs: ")
     try:
         number_of_bits = int(number_of_bits)
-        binary_network = IP(network, number_of_bits=7)
-        binary_mask = IP(mask, number_of_bits=7, is_mask=True)
+        binary_network = IP(network, number_of_bits=number_of_bits)
+        binary_mask = IP(mask, number_of_bits=number_of_bits, is_mask=True)
         result = IPChecker(binary_network, binary_mask, input_file)
         result.check()
     except ValueError:

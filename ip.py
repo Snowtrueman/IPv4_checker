@@ -52,7 +52,7 @@ class IP:
         ipv4_splitted = ipv4_address.split(".")
         for octet in ipv4_splitted:
             if not self._is_mask:
-                if int(octet) not in range(0, 128):
+                if int(octet) not in range(0, 2**self._number_of_bits):
                     _flag = False
             else:
                 if int(octet) not in self._valid_mask_values:
